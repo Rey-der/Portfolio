@@ -720,6 +720,7 @@ body.darkmode .icon img {
 
 .projects-title {
   text-align: center;
+  color: var(--primary-accent);
 }
 
 .projects-row {
@@ -778,6 +779,7 @@ body.darkmode .icon img {
 
 .project-box a {
   display: inline-block;
+  
 }
 
 .project-box:hover {
@@ -793,6 +795,7 @@ body.darkmode .icon img {
 .project-box:hover .project-mask .project-caption {
   bottom: 30px;
   opacity: 1;
+  
 }
 
 .project-img {
