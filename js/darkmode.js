@@ -1,37 +1,34 @@
-let darkmode = localStorage.getItem('darkmode')
-const themeSwitch = document.getElementById('theme-switch')
+// darkmode.js
+document.addEventListener("DOMContentLoaded", () => {
+  const themeSwitch = document.getElementById('theme-switch');
+  const sunIcon = document.getElementById("sun-icon");
+  const moonIcon = document.getElementById("moon-icon");
 
-const enableDarkmode = () => {
-    document.body.classList.add('darkmode')
-    localStorage.setItem('darkmode', 'active')
-}
-const disableDarkmode = () => {
-    document.body.classList.remove('darkmode')
-    localStorage.setItem('darkmode', null)
-}
+  let darkmode = localStorage.getItem('darkmode');
 
-if(darkmode === "active") enableDarkmode()
+  const enableDarkmode = () => {
+    document.body.classList.add('darkmode');
+    localStorage.setItem('darkmode', 'active');
+    sunIcon.style.opacity = "0";
+    moonIcon.style.opacity = "1";
+  };
 
-themeSwitch.addEventListener("click", () => {
-    darkmode = localStorage.getItem('darkmode')
-    darkmode !== "active" ? enableDarkmode(): disableDarkmode()
-})
+  const disableDarkmode = () => {
+    document.body.classList.remove('darkmode');
+    localStorage.setItem('darkmode', null);
+    sunIcon.style.opacity = "1";
+    moonIcon.style.opacity = "0";
+  };
 
-document.addEventListener("DOMContentLoaded", function () {
-    const themeSwitch = document.getElementById("theme-switch");
-    const sunIcon = document.getElementById("sun-icon");
-    const moonIcon = document.getElementById("moon-icon");
-  
-    themeSwitch.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode"); // You might need to implement dark mode styling separately
-  
-      if (document.body.classList.contains("dark-mode")) {
-        sunIcon.style.opacity = "0";
-        moonIcon.style.opacity = "1";
-      } else {
-        sunIcon.style.opacity = "1";
-        moonIcon.style.opacity = "0";
-      }
-    });
+  // Set dark mode on page load if it's in localStorage
+  if (darkmode === "active") enableDarkmode();
+
+  themeSwitch.addEventListener("click", () => {
+    darkmode = localStorage.getItem('darkmode');
+    if (darkmode !== "active") {
+      enableDarkmode();
+    } else {
+      disableDarkmode();
+    }
   });
-  
+});
