@@ -18,14 +18,14 @@ try {
   $mail->CharSet = "UTF-8";
   $mail->SMTPAuth   = true;
 
-  $mail->Host       = 'smtp.example.com';                     //Set the SMTP server to send through
-  $mail->Username   = 'user@example.com';                     //SMTP username
-  $mail->Password   = 'secret';                               //SMTP password
+  $mail->Host       = 'smtp.mailersend.net';                     //Set the SMTP server to send through
+  $mail->Username   = 'MS_UaN2a3@trial-3zxk54v91dqgjy6v.mlsender.net';                     //SMTP username
+  $mail->Password   = 'mssp.0tjbOM4.vywj2lpzxpkg7oqz.YRls8Tx';                               //SMTP password
   $mail->SMTPSecure = 'ssl';
-  $mail->Port       = 465;
+  $mail->Port       = 587;
 
   $mail->setFrom('from@example.com', $title);
-  $mail->addAddress('youraddress@mail.me');
+  $mail->addAddress('wetzel.maximilian@web.de');
   $mail->isHTML(true);
   $mail->Subject = $title;
   $mail->Body = $body;
