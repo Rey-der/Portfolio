@@ -1,0 +1,170 @@
+@media (max-width: 1320px) {
+  .container-lg {
+    max-width: 1200px;
+  }
+  
+  .hero-content {
+    padding: 0;
+  }
+
+  .header-nav {
+    padding: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .title {
+    font-size: 40px;
+  }
+
+  .about-content {
+    padding-right: 0;
+  }
+
+  .services-row {
+    justify-content: center;
+  }
+
+  .project-box {
+    max-width: 454px;
+  }
+
+  .about,
+  .projects,
+  .contact {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 977px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .hero-row {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-img {
+    justify-content: center;
+  }
+  .about-social-list {
+    display: block;
+  }
+
+  .about-row {
+    grid-template-columns: 1fr;
+  }
+
+  .about-row {
+    row-gap: 50px;
+    margin-bottom: 50px;
+  }
+
+  .hero {
+    padding-top: 160px;
+  }
+
+  .social-links-row {
+    column-gap: 17px;
+    margin: 30px 0 30px;
+  }
+
+  .btn {
+    font-size: 11px;
+    padding: 0 20px;
+  }
+  .services-row {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    row-gap: 50px;
+  }
+
+  .service-card-img {
+    height: 40px;
+  }
+
+  .project-box {
+    max-width: 327px;
+  }
+
+  .about,
+  .projects,
+  .contact {
+    padding: 5rem 0;
+  }
+
+  .title {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 720px) {
+  .project-box {
+    max-width: 100%;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .nav-btn {
+    display: block;
+  }
+
+  .nav.open .nav-list {
+    position: fixed;
+    inset: 0;
+    background-color: #fff;
+    z-index: 1;
+    padding: 46px 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 24px;
+    font-size: 48px;
+    font-weight: 500;
+  }
+  #theme-switch {
+    transform: translateY(0px)translateX(175px);
+  }
+  .darkmode .nav.open .nav-list,
+  .darkmode .nav-link{
+      background-color: #222; /* Dunkler Hintergrund */
+      color: #b9b9b9; /* Helle Schriftfarbe für Kontrast */
+  }
+  .nav-link {
+    color: #565a5b;
+  }
+  .darkmode .nav-link.active{
+  color: #ddd; /* Helle Schriftfarbe für Kontrast */
+  }
+  .nav-link.active {
+    color: #0c1618;
+  }
+
+  .nav-btn {
+    position: absolute;
+    z-index: 9;
+    top: 36px;
+    right: 30px;
+  }
+
+  .nav.open .nav-btn {
+    position: fixed;
+  }
+
+  .header-nav {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 406px) {
+  .hero-img {
+    flex: 1 1 100%;
+  }
+}
